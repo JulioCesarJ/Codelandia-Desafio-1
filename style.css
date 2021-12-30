@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url(fontes/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url(fontes/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'LexendDeca-Regular';
+  src: url(fontes/LexendDeca-Regular.ttf);
+  font-weight: normal;
+}
+
+body{
+  background-color: #f3f5f7;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores */
+  --blue: #3EA1DB;
+  --blue-dark: #574AE8;
+  --white: #FFF;
+  /* Tipografia */
+  --title: #313131;
+  --text: #B6B6B6;
+  /* Cor de Fundo Cabeçalho */
+  --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+}
+
+/* Layout Mobile */
+
+header{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  width: 100%;
+  background: var(--linear);
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  margin: 48px 0 41px;
+  line-height: 23px;
+  font-family: 'LexendDeca-Regular';
+  color: var(--white);
+}
+
+.title h1{
+  font-weight: normal;
+}
+
+.fa-search{
+  position: relative;
+  color: white;
+  font-size: 32px;
+  left: 10px;
+  top: 36px;
+}
+
+input#search{
+  font-size: 14px;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  background-color: #FFFFFF33;
+  margin-bottom: 48px;
+  height: 40px;
+  width: 100%;
+  font-family: 'FontAwesome';
+}
+
+input::placeholder{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter-Regular';
+  padding-left: 50px;
+}
+
+/* Cards */
+.card{
+  padding: 50px 20px;
+}
+
+.cards{
+  margin-top: 25px;
+  padding: 16px;
+  background-color: var(--white);
+  font-family: 'LexendDeca-Regular';
+  font-weight: 400;
+}
+
+.card-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 27px;
+  color: var(--text);
+}
+
+.fa-heart{
+  color: #574AE8;
+  font-size: 20px;
+}
+
+.fa-heart:hover{
+  color: red;
+}
+
+.titulo{
+  color: var(--title);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.paragraf{
+  color: var(--text);
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* Desktop */
+
+@media (min-width: 769px) {
+  .header, section{
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  input#search{
+    font-size: 18px;
+  }
+
+  input::placeholder{
+    font-size: 26px;
+  }
+
+  .fa-heart{
+    font-size: 26px;
+  }
+  
+  .paragraf{
+    font-size: 18px;
+  }
+}
